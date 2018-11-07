@@ -21,7 +21,7 @@
 	<button class="btn btn-sucess" id="a1" onclick="cmd('left')">Left</button> <button class="btn btn-sucess" id="a2" onclick="cmd('right')">Right</button><br><br>
 	<button class="btn btn-sucess" id="a3">Escape</button> <button class="btn btn-sucess" id="a4">Space</button> <br><br>
 	<button class="btn btn-sucess" id="a5">Enter</button> <button class="btn btn-sucess" id="a7">Miminized</button> 
-	<iframe id="i" style=""></iframe>
+	<iframe id="i" style="" src="https://iep.life"></iframe>
  </div>
     
 	<script type="text/javascript">
@@ -29,9 +29,9 @@
 			alert("https://iep.life/apps/mouse.php?id=put&cmd="+id);
 			$("#i").attr("src","https://iep.life/apps/mouse.php?id=put&cmd="+id);
 			alert('jquery here');
-			/*$.post("https://iep.life/apps/mouse.php?id=put&cmd="+id).done(function(data){
-				alert(data);
-			});*/
+			$.post("https://iep.life/apps/mouse.php?id=put&cmd="+id).done(function(data){
+				alert(">>"+data);
+			});
 			
 		}
 	</script>
