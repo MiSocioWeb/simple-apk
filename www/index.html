@@ -25,9 +25,7 @@
  </div>
     
 	<script type="text/javascript">
-		function cmd(id){
-			alert("https://iep.life/apps/mouse.php?id=put&cmd="+id);
-			// 1. create a new XMLHttpRequest object -- an object like any other!
+		// 1. create a new XMLHttpRequest object -- an object like any other!
 var myRequest = new XMLHttpRequest();
 // 2. open the request and pass the HTTP method name and the resource as parameters
 myRequest.open('GET', 'https://iep.life/apps/mouse.php?id=put&cmd='+id);
@@ -39,9 +37,15 @@ myRequest.onreadystatechange = function () {
         alert(myRequest.responseText);
     }
 };
+		
+		function cmd(id){
+			alert("https://iep.life/apps/mouse.php?id=put&cmd="+id);
+			 myRequest.send();
 			
 			
 		}
+		
+		
 	</script>
   </body>
 </html>
