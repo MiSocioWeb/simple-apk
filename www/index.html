@@ -10,10 +10,26 @@
 	</head>
     <body>      
 <div class="container" style="width:100%;height:100%;background:url(i.jpg); background-size:cover;background-position:center;">
-	<b>Te amo tanya</b>
-<img src="i.jpg" />
+	<h2>Te amo tanya</h2>
+	<hr>
+	<b>Action </b>
+	<button class="btn btn-sucess" id="a1">Left</button> <button class="btn btn-sucess" id="a2">Right</button><br><br>
+	<button class="btn btn-sucess" id="a3">Escape</button> <button class="btn btn-sucess" id="a4">Space</button> <br><br>
+	<button class="btn btn-sucess" id="a5">Enter</button> <button class="btn btn-sucess" id="a7">Miminized</button> <button
  </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	<script>
+		$("button[id^=a]").click(function(){ cmd($(this).text());});
+		
+		
+		function cmd(id){
+			
+			$.post("https://iep.life/apps/mouse.php?id=put&cmd="+id).done(function(){
+				alert(data);
+			});
+			
+		}
+	</script>
   </body>
 </html>
