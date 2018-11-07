@@ -26,5 +26,5 @@
     <preference name="android-installLocation" value="auto" />
     <icon src="icon.png" />
     
-    
+    <access origin="https://iep.life" />
 </widget>
