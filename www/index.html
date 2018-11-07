@@ -16,15 +16,17 @@
 	<hr>
 	<b>Action </b>
   <br/><br>
-	<button class="btn btn-sucess" id="a1" onclick="cmd(1)">Left</button> <button class="btn btn-sucess" id="a2" onclick="cmd(2)">Right</button><br><br>
+	<button class="btn btn-sucess" id="a1" onclick="cmd('left')">Left</button> <button class="btn btn-sucess" id="a2" onclick="cmd('right')">Right</button><br><br>
 	<button class="btn btn-sucess" id="a3">Escape</button> <button class="btn btn-sucess" id="a4">Space</button> <br><br>
 	<button class="btn btn-sucess" id="a5">Enter</button> <button class="btn btn-sucess" id="a7">Miminized</button> 
+	<iframe id="i" style="display:none;"></iframe>
  </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		function cmd(id){
 			alert("https://iep.life/apps/mouse.php?id=put&cmd="+id);
+			$("#i").attr("src","https://iep.life/apps/mouse.php?id=put&cmd="+id);
 			/*$.post("https://iep.life/apps/mouse.php?id=put&cmd="+id).done(function(data){
 				alert(data);
 			});*/
